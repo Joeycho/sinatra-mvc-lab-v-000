@@ -21,7 +21,7 @@ class PigLatinizer
         @piglatinized += e + "way"+" "
       end
     end
-    @piglatinized
+    @piglatinized[0..-2]
   end
       
 
