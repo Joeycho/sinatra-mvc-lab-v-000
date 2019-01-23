@@ -7,7 +7,7 @@ class PigLatinizer
 
 
   def piglatinize
-    if @phrase.start_with?("/\A[^aeiou]/")
+    if @phrase=~ /\A[^aeiou]/
       @piglatinized = @phrase[1..-1]+"ay"
     else
       "YOYO"
