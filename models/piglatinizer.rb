@@ -2,17 +2,14 @@ class PigLatinizer
   attr_reader :phrase
 
   def initialize(phrase)
-    @phrase = phrase
+    @words = phrase.split(" ")
   end
   
-  def split(phrase)
-
 
   def piglatinize
-    words = @phrase.split(" ")
     @piglatinized = ""
     
-    words.each do |e|
+    @words.each do |e|
       if e=~ /\A[^aeiouAEIOU]/ && e[1..-1] =~ /\A[aeiouAEIOU]/
         @piglatinized += e[1..-1]+e[0]+"ay"+" "
       elsif e=~ /\A[^aeiouAEIOU]/ && e[1..-1] =~ /\A[^aeiouAEIOU]/ && e[2..-1] =~ /\A[aeiouAEIOU]/
