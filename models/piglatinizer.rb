@@ -6,8 +6,8 @@ class PigLatinizer
   end
 
 
-  def piglatinize(phrase)
-      @phrase = phrase
+  def piglatinize
+      self.phrase
   end
       
 
