@@ -1,7 +1,7 @@
 class PigLatinizer
   attr_reader :phrase
 
-  def initialize(phrase)
+  def initialize()
     @words = phrase.split(" ")
   end
   
