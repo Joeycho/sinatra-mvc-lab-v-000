@@ -7,6 +7,7 @@ class PigLatinizer
 
 
   def piglatinize
+    case 
     if @phrase=~ /\A[^aeiou]/ && @phrase[1..-1] =~ /\A[aeiou]/
       @piglatinized = @phrase[1..-1]+@phrase[0]+"ay"
     else
