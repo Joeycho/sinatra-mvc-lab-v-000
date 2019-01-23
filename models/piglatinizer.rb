@@ -1,7 +1,7 @@
 class PigLatinizer
 
-  def piglatinize (name)
-
+  def piglatinize (phrase)
+      
   end
 
 
