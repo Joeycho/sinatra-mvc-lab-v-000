@@ -2,21 +2,23 @@ class PigLatinizer
   attr_reader :phrase
 
   def initialize(phrase)
-    @phrase = phrase.downcase
+    @phrase = phrase
   end
 
 
   def piglatinize
-    words
+    words = @phrase.split(" ")
+    @piglatinized = ""
     
-    if @phrase=~ /\A[^aeiou]/ && @phrase[1..-1] =~ /\A[aeiou]/
-      @piglatinized = @phrase[1..-1]+@phrase[0]+"ay"
-    elsif @phrase=~ /\A[^aeiou]/ && @phrase[1..-1] =~ /\A[^aeiou]/ && @phrase[2..-1] =~ /\A[aeiou]/
-      @piglatinized = @phrase[2..-1]+@phrase[0..1]+"ay"
-    elsif @phrase=~ /\A[^aeiou]/ && @phrase[1..-1] =~ /\A[^aeiou]/ && @phrase[2..-1] =~ /\A[^aeiou]/ && @phrase[3..-1] =~ /\A[aeiou]/
-      @piglatinized = @phrase[3..-1]+@phrase[0..2]+"way"
+    words.each do |e|
+    if e=~ /\A[^aeiou]/ && e[1..-1] =~ /\A[aeiou]/
+      @piglatinized += e[1..-1]+e[0]+"ay"+" "
+    elsif e=~ /\A[^aeiou]/ && e[1..-1] =~ /\A[^aeiou]/ && e[2..-1] =~ /\A[aeiou]/
+      @piglatinized += e[2..-1]+e[0..1]+"ay"+" "
+    elsif e=~ /\A[^aeiou]/ && e[1..-1] =~ /\A[^aeiou]/ && e[2..-1] =~ /\A[^aeiou]/ && e[3..-1] =~ /\A[aeiou]/
+      @piglatinized += e[3..-1]+e[0..2]+"ay"+" "
     else
-      @piglatinized = @phrase + "ay"
+      @piglatinized = e + "way"
     end
     @piglatinized
   end
