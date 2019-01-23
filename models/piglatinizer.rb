@@ -2,7 +2,7 @@ class PigLatinizer
   attr_reader :phrase
 
   def piglatinize(phrase)
-      phrase
+      @phrase = phrase
   end
       
 
