@@ -7,7 +7,7 @@ class PigLatinizer
 
 
   def piglatinize
-    if @phrase.start
+    if @phrase.start_with?()
       @phrase = 
   end
       
