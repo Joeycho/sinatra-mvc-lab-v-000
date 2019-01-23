@@ -7,6 +7,7 @@ class PigLatinizer
 
 
   def piglatinize
+    if @phrase.start
       @phrase = 
   end
       
