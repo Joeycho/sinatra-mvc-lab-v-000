@@ -7,7 +7,7 @@ class PigLatinizer
 
 
   def piglatinize
-      self.phrase
+      self
   end
       
 
