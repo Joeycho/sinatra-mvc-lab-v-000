@@ -18,7 +18,7 @@ class PigLatinizer
       elsif e=~ /\A[^aeiou]/ && e[1..-1] =~ /\A[^aeiou]/ && e[2..-1] =~ /\A[^aeiou]/ && e[3..-1] =~ /\A[aeiou]/
         @piglatinized += e[3..-1]+e[0..2]+"ay"+" "
       else
-        @piglatinized = e + "way"
+        @piglatinized += e + "way"
       end
     end
     @piglatinized
