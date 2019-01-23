@@ -2,11 +2,12 @@ class PigLatinizer
   attr_reader :phrase
 
   def initialize()
-    @words = phrase.split(" ")
+    self
   end
   
 
-  def piglatinize
+  def piglatinize(phrase)
+    @words = phrase.split(" ")
     @piglatinized = ""
     
     @words.each do |e|
