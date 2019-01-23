@@ -7,7 +7,7 @@ class PigLatinizer
 
 
   def piglatinize
-    if @phrase.start_with?()
+    if @phrase.start_with?(/\A[^aeiou]/)
       @phrase = 
   end
       
