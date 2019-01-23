@@ -4,6 +4,8 @@ class PigLatinizer
   def initialize(phrase)
     @phrase = phrase
   end
+  
+  def split(phrase)
 
 
   def piglatinize
