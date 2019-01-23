@@ -7,11 +7,13 @@ class PigLatinizer
 
 
   def piglatinize
-    if @phrase=~ /\A[^aeiou]/ && @phrase[1..-1] =~ /\A[aeiou]/
-      @piglatinized = @phrase[1..-1]+@phrase[0]+"ay"
-    elsif  @phrase=~ /\A[^aeiou]/ && @phrase[2..-1] =~ /\A[aeiou]/
-      "YOYO"
+    if word =~ (/\A[aeiou]/i)
+    word = word + 'ay'
+    elsif word =~ (/\A[^aeiou]/i)
+      match = /\A[^aeiou]/i.match(word)
+      word = match.post_match + match.to_s + 'ay'
     end
+  word
   end
       
 
